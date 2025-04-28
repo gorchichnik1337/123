@@ -42,6 +42,7 @@ p {
     animation-delay: 1s;
     text-shadow: 0 0 25px white;
     line-height: 1;
+    color: darkred;
 }
 
 .small-text {
