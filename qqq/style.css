@@ -1,0 +1,110 @@
+body {
+    background: black url('123.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 0.5s;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+p {
+    font-size: 1.8em;
+    margin: 15px 0;
+}
+
+.price {
+    font-size: 6em;
+    margin: 30px 0;
+    transform: scale(0);
+    animation: scaleUp 1s forwards;
+    animation-delay: 1s;
+    text-shadow: 0 0 25px white;
+    line-height: 1;
+}
+
+.small-text {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin: 20px 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s forwards;
+    animation-delay: 1.8s;
+}
+
+.contact {
+    margin-top: 50px;
+    font-size: 2em;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 15px 30px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.contact:hover {
+    text-shadow: 0 0 10px cyan;
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.1);
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 4px white; }
+    to { text-shadow: 0 0 7px white, 0 0 30px rgba(255,255,255,0.5); }
+}
+
+@keyframes scaleUp {
+    to { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.stars {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle var(--duration) infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
